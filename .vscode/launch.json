@@ -1,0 +1,12 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "run",
+            "type": "python",
+            "request": "launch",
+            "program": "lambda_function.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}
