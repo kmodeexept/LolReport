@@ -4,7 +4,8 @@
         {
             "label": "upload",
             "type": "shell",
-            "command": "./update.sh"
+            "command": "./update.sh",
+            "problemMatcher": []
         }
     ]
 }
