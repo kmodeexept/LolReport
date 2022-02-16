@@ -84,10 +84,13 @@ def load_data(summoner_name):
 
 def lambda_handler(event, context):
 
-    if event is not None and "queryStringParameters" in event and "summonerName" in event["queryStringParameters"]:
-        summoner_name = event["queryStringParameters"]["summonerName"]
-    else:
-        summoner_name = "Agurin"
+    summoner_name = "Agurin"
+    
+    if event is not None:
+        if "queryStringParameters" in event:
+            if event["queryStringParameters"] is not None:
+                if "summonerName" in event["queryStringParameters"]:
+                    summoner_name = event["queryStringParameters"]["summonerName"]        
 
     data = load_data(summoner_name)
 
